@@ -45,6 +45,10 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
   }, [messages]);
 
   const processFiles = (files: File[]) => {
+    if (!isLoggedIn) {
+      alert('Image uploading for analyzing is only after login.');
+      return;
+    }
     const MAX_FILE_SIZE = 15 * 1024 * 1024; // 15MB limit for inlineData
 
     files.forEach(file => {
@@ -250,6 +254,10 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
             <div className="absolute right-2 bottom-2 flex items-center gap-1">
               <button
                 onClick={() => {
+                  if (!isLoggedIn) {
+                    alert('Image uploading for analyzing is only after login.');
+                    return;
+                  }
                   if (fileInputRef.current) {
                     fileInputRef.current.accept = "image/*";
                     fileInputRef.current.click();
