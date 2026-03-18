@@ -1,0 +1,8 @@
+{
+  "name": "MeemVa AI",
+  "description": "A sophisticated AI chatbot for text, voice, image, and video generation.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
