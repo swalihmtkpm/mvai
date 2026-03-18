@@ -31,9 +31,18 @@ export const Auth: React.FC = () => {
     );
   }
 
+  const handleLogin = async () => {
+    try {
+      await signInWithGoogle();
+    } catch (error: any) {
+      console.error("Login Error:", error);
+      alert(`Login failed: ${error.message || "Unknown error"}`);
+    }
+  };
+
   return (
     <button
-      onClick={signInWithGoogle}
+      onClick={handleLogin}
       className="flex items-center justify-center w-full px-4 py-2 bg-aqua-blue text-black rounded-lg font-medium hover:bg-aqua-blue/90 transition-colors"
       title="Sign in with Google"
     >
