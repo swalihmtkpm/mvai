@@ -284,7 +284,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
           </div>
           
           <p className="mt-2 text-[10px] text-center text-zinc-600 font-medium uppercase tracking-widest">
-            MeemVa AI may take a few seconds for deep thinking. Please check important information.
+            MeemVa AI may take a few seconds . Please check important information.
           </p>
         </div>
       </div>
