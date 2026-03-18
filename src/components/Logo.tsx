@@ -3,7 +3,7 @@ import React from 'react';
 export const Logo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <img 
-      src="/mvailogo.png" 
+      src="/public/mvailogo.png" 
       alt="MeemVa Logo" 
       className={className}
       referrerPolicy="no-referrer"
